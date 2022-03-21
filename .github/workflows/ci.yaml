@@ -1,12 +1,9 @@
-name: Node.js CI
+name: rule-ci-lab
 
 on:
-  push:
-    branches: 
-      - master
   pull_request:
     branches:
-      - master
+      - develop
 
 jobs:
   build:
