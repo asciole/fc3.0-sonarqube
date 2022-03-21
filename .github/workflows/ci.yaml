@@ -1,18 +1,14 @@
 name: rule-ci-lab
-
 on:
   pull_request:
     branches:
       - develop
-
 jobs:
-  build:
-
+  check-ci-sonarqube:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: ./calcjs  
-    
+        working-directory: ./calcjs     
     steps:
       - uses: actions/checkout@v2
       - name: Use Node.js 
