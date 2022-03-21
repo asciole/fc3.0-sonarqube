@@ -12,7 +12,9 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-
+    defaults:
+      run:
+        working-directory: ./calcjs  
     strategy:
       matrix:
         node-version: [ 10.x ]
@@ -24,8 +26,6 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: Install dependencies
-        working-directory: ./calcjs
         run: npm install jest @types/jest sonar-scanner --only-dev      
       - name: Executando Teste  
-        working-directory: ./calcjs
         run: npm run test
