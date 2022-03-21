@@ -1,4 +1,4 @@
-name: Node.js CI
+name: rule-ci-lab
 
 on:
   pull_request:
