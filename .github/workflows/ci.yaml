@@ -27,4 +27,5 @@ jobs:
         working-directory: ./calcjs
         run: npm install jest @types/jest sonar-scanner --only-dev      
       - name: Executando Teste  
+        working-directory: ./calcjs
         run: npm run test
